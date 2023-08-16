@@ -1,5 +1,13 @@
-FROM openjdk:17
+FROM node:14
 
-ADD /target/ProfileService-0.0.1-SNAPSHOT.jar backend.jar
+WORKDIR /app
 
-ENTRYPOINT ["java" , "-jar" , "backend.jar"]
+COPY package*.json ./
+
+RUN npm install
+
+COPY . .
+
+EXPOSE 3000
+
+CMD ["npm", "start"]

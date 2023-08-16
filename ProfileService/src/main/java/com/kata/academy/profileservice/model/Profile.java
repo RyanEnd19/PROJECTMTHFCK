@@ -1,5 +1,6 @@
 package com.kata.academy.profileservice.model;
 
+import com.kata.academy.profileservice.dto.PassportInfoDTO;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import jakarta.persistence.*;
@@ -32,4 +33,15 @@ public class Profile {
 
     @OneToOne(cascade = CascadeType.ALL)
     private PassportInfo passportInfo;
+
+    public PassportInfo getPassportInfo() {
+        return passportInfo;
+    }
+
+    public void setPassportInfo(PassportInfo passportInfo) {
+        this.passportInfo = passportInfo;
+    }
+
+    public void setPassportInfo(PassportInfoDTO passportInfo) {
+    }
 }

@@ -1,16 +1,28 @@
-version: '3'
+version: '3.8'
 
 services:
-  postgres:
-    image: 'postgres:10'
-    container_name: 'java-postgres'
-    environment:
-      - 'POSTGRES_USER=root'
-      - 'POSTGRES_PASSWORD=root'
-      - 'POSTGRES_DB=airline_db'
-
-  app:
-    build: ./
-    container_name: 'java-app'
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports:
-      - 8080:8080
+      - "3000:3000"
+    depends_on:
+      - postgres
+    environment:
+      DATABASE_URL: postgres://user:password@postgres:5432
+      # Другие переменные среды приложения
+
+  postgres:
+    image: postgres:13
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
