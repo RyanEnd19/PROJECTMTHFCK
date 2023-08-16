@@ -41,7 +41,4 @@ public class Profile {
     public void setPassportInfo(PassportInfo passportInfo) {
         this.passportInfo = passportInfo;
     }
-
-    public void setPassportInfo(PassportInfoDTO passportInfo) {
-    }
 }
