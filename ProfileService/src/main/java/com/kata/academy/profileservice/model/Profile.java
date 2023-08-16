@@ -34,6 +34,8 @@ public class Profile {
     @OneToOne(cascade = CascadeType.ALL)
     private PassportInfo passportInfo;
 
+    @Column(name = "account_id")
+    private Long accountId;
 
 
     public PassportInfo getPassportInfo() {
