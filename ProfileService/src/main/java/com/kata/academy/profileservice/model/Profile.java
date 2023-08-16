@@ -5,7 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import jakarta.persistence.*;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 
 /**
@@ -29,7 +29,7 @@ public class Profile {
     private String lastName;
 
     @Column(name = "birth_date")
-    private LocalDateTime birthDate;
+    private LocalDate birthDate;
 
     @OneToOne(cascade = CascadeType.ALL)
     private PassportInfo passportInfo;
