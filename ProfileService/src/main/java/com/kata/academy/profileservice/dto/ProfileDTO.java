@@ -9,12 +9,10 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 public class ProfileDTO {
-
     private String firstName;
     private String lastName;
 
     private LocalDateTime birthDate;
     private PassportInfoDTO passportInfo;
-
 
 }

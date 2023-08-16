@@ -34,6 +34,8 @@ public class Profile {
     @OneToOne(cascade = CascadeType.ALL)
     private PassportInfo passportInfo;
 
+
+
     public PassportInfo getPassportInfo() {
         return passportInfo;
     }

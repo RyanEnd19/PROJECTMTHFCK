@@ -1,5 +1,8 @@
 package com.kata.academy.profileservice;
 
+import com.kata.academy.profileservice.model.Profile;
+
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -11,3 +14,4 @@ public class ProfileServiceApplication {
 	}
 
 }
+

@@ -13,6 +13,7 @@ import java.time.LocalDate;
 @Entity
 @Data
 @NoArgsConstructor
+@Table(name = "passport_info")
 public class PassportInfo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

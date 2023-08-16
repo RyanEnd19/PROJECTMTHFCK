@@ -1,13 +1,11 @@
-FROM node:14
+# Используйте официальный Maven-образ для фазы сборки
+FROM maven:3.8.1-jdk-11-slim AS build
 
-WORKDIR /app
+# Установите рабочий каталог
+WORKDIR /workspace/app
 
-COPY package*.json ./
+# Копируйте pom.xml и скачивайте все зависимости для быстрой итерации
+COPY pom.xml .
+RUN mvn dependency:go-offline
 
-RUN npm install
-
-COPY . .
-
-EXPOSE 3000
-
-CMD ["npm", "start"]
+# Теперь копируйте исходный код
