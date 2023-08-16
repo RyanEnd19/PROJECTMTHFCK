@@ -1,0 +1,24 @@
+# Default ignored files
+/shelf/
+/.idea/
+.mvn
+# Editor-based HTTP Client requests
+/httpRequests/
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
+# Zeppelin ignored files
+/ZeppelinRemoteNotebooks/
+target/
+*.iml
+.idea/
+/BookingService/target
+/EmailService/target
+/EurekaServcie/target
+/FileConverterService/target
+/FilesStorageService/target
+/FlightManagementService/target
+/GatewayService/target
+/PaymentService/target
+/ProfileService/target/
+/TicketStorageService/target
